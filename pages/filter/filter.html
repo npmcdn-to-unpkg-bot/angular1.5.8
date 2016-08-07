@@ -7,7 +7,18 @@
     <link  rel="stylesheet" href="../../assets/bootstrap/css/bootstrap-theme.min.css">
 </head>
 <body>
+<div ng-app="myApp">
+    <div ng-controller="myController">
+     {{data.com| limitTo:-5}}
+        {{data.name| uppercase}} 性别 {{data.sex|lowercase}}
+        城市:{{data.city| filter:'北京'}}
+        城市:{{data.city| orderBy:'-py'}}
 
+
+        城市:{{data.city| orderBy:'py'}}
+        数据:{{data|json}}
+       </div>
+</div>
 <script type="text/javascript" src="../../assets/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.min.js"></script>
 <script  type="text/javascript" src="../../assets/angular/angular.min.js"></script>
